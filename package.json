@@ -10,7 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.4.4"
+    "@fontsource/comfortaa": "^5.0.18",
+    "@fontsource/geologica": "^5.0.3",
+    "astro": "^4.4.4",
+    "gsap": "^3.12.5"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

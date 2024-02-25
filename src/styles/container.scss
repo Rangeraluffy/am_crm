@@ -1,0 +1,29 @@
+@import "variables";
+
+.ctSmall{
+    max-width: 50%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $primary-color;
+}
+
+.ct{
+    max-width: 65%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctLarge{
+    max-width: 85%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ct100{
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
