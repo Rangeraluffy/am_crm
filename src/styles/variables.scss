@@ -1,4 +1,53 @@
+// ----------------------
+// Couleurs
+// ----------------------
+
 $primary-color: white;
 $secondary-color: red;
 $color-btn-primary: grey;
 $color-btn-secondary: grey;
+
+// à ne pas supprimer
+
+$c-black: #000000;
+$c-white: #ffffff;
+
+$c-valid: #2ed573;
+$c-alert: #f9a94c;
+$c-error: #fe4040;
+
+// ----------------------
+// Typo
+// ----------------------
+
+
+$fw-normal: normal;
+$fw-light: 300;
+$fw-reg: 400;
+$fw-med: 500;
+$fw-semi: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+
+$gutter: 1rem;
+
+// ----------------------
+// Breakpoints
+// ----------------------
+
+$breakpoints: (
+    "phone": 640px,
+    "tablet": 960px,
+    "big-tablet": 1150px,
+    "desktop": 1350px,
+    "big-desktop": 1750px
+);
+
+//-------------
+// MARGES
+//-------------
+
+$marginThin: 50px;
+$marginNormal: 150px;
+$marginFat : 300px;

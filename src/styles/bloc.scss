@@ -1,0 +1,117 @@
+@import "variables";
+
+/*----------
+IMAGE GAUCHE TEXTE DROIT
+-----------*/
+
+.conteneurBlocImgTxt{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    .contenuMixteImageG{
+        width: 50%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .contenuMixteTexteD{
+        width: 50%;
+    }
+}
+
+/*----------
+IMAGE DROITE TEXTE GAUCHE
+-----------*/
+
+.conteneurBlocImgTxt{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    .contenuMixteTexteG{
+        width: 50%;
+    }
+
+    .contenuMixteImageD{
+        width: 50%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/*----------
+IMAGE FULL
+-----------*/
+
+.imageFull{
+    img{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/*----------
+DOUBLE COLUMN TEXT
+-----------*/
+
+.double-columnText{
+    display: flex;
+    column-gap: 50px;
+}
+
+/*----------
+TRIPLE COLUMN TEXT
+-----------*/
+
+.triple-columnText{
+    display: grid;
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+/*----------
+BLOC LIEN CARD
+-----------*/
+
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0;
+
+    .link-card {
+        list-style: none;
+        display: flex;
+        padding: 1px;
+        background-color: #23262d;
+        background-image: none;
+        background-size: 400%;
+        border-radius: 7px;
+    }
+}
+.link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+}
+
+.link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+}
+.link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
+}
