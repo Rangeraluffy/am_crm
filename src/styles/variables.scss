@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'KodeMono';
-    src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf');
+    font-family: 'Raleway-Medium';
+    src: url('/fonts/Raleway-Medium.otf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -51,6 +51,15 @@ $breakpoints: (
     "desktop": 1350px,
     "big-desktop": 1750px
 );
+
+@mixin for-size($size) {
+  // Récupérer la valeur du breakpoint à partir de la map $breakpoints
+  $breakpoint: map-get($breakpoints, $size);
+
+  @media (max-width: $breakpoint) {
+      @content;
+  }
+}
 
 //-------------
 // MARGES

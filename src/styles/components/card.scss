@@ -1,3 +1,4 @@
+
 /*----------
 BLOC LIEN CARD
 -----------*/
@@ -6,6 +7,10 @@ BLOC LIEN CARD
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 0;
+
+    // @include for-size(big-tablet) {
+    //     grid-template-columns: repeat(2,1fr);
+    //  }
 
     .link-card {
         list-style: none;

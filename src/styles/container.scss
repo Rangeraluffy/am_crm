@@ -4,6 +4,10 @@
     margin-left: auto;
     margin-right: auto;
     background-color: $primary-color;
+
+    @include for-size(phone) {
+        max-width: 90%;
+    }
 }
 
 .ct{
@@ -11,6 +15,14 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    @include for-size(big-desktop) {
+        max-width: 75%;
+    }
+
+    @include for-size(phone) {
+        max-width: 90%;
+    }
 }
 
 .ctLarge{
@@ -18,7 +30,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    @include for-size(big-desktop) {
+        max-width: 80%;
+    }
+
+    @include for-size(phone) {
+        max-width: 90%;
+    }
 }
+
 .ct100{
     max-width: 100%;
     width: 100%;

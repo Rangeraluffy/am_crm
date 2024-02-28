@@ -14,10 +14,22 @@ IMAGE GAUCHE TEXTE DROIT
             width: 100%;
             height: 100%;
         }
+
+        @include for-size(big-tablet) {
+            width: 100%;
+         }
     }
 
     .contenuMixteTexteD{
         width: 50%;
+
+        @include for-size(big-tablet) {
+            width: 100%;
+         }
+    }
+
+    @include for-size(big-tablet) {
+       flex-direction: column;
     }
 }
 
@@ -32,6 +44,10 @@ IMAGE DROITE TEXTE GAUCHE
 
     .contenuMixteTexteG{
         width: 50%;
+
+        @include for-size(big-tablet) {
+            width: 100%;
+         }
     }
 
     .contenuMixteImageD{
@@ -41,7 +57,15 @@ IMAGE DROITE TEXTE GAUCHE
             width: 100%;
             height: 100%;
         }
+
+        @include for-size(big-tablet) {
+            width: 100%;
+         }
     }
+
+    @include for-size(big-tablet) {
+        flex-direction: column;
+     }
 }
 
 /*----------
@@ -52,6 +76,10 @@ IMAGE FULL
     img{
         width: 100%;
         height: 100vh;
+
+        @include for-size(tablet) {
+           height: 100%;
+        }
     }
 }
 
@@ -62,6 +90,10 @@ DOUBLE COLUMN TEXT
 .double-columnText{
     display: flex;
     column-gap: 50px;
+
+    @include for-size(big-tablet) {
+        flex-direction: column;
+     }
 }
 
 /*----------
@@ -73,6 +105,14 @@ TRIPLE COLUMN TEXT
     column-gap: 50px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+
+    @include for-size(big-tablet) {
+        grid-template-columns: repeat(2,1fr);
+     }
+
+    @include for-size(tablet) {
+        grid-template-columns: repeat(1,1fr);
+     }
 }
 
 
