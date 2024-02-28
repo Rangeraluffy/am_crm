@@ -1,9 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import myImage from "../assets/images/full.jpg"; 
+// import myImage from "/assets/images/full.jpg"; 
+
+interface Props {
+	src: string;
+    alt: string;
+}
+
+const { src, alt } = Astro.props;
 ---
 
     <div class="imageFull">
-        <Image src={myImage} alt="La description de mon image." />
+        <Image src={src}  width="200"   height="150" alt={alt} />
     </div>
 

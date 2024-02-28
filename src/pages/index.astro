@@ -1,24 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Projects from '../layouts/Projects.astro';
-import Project from '../components/Project.astro';
-import Variables from '../components/Variables.astro';
-import Hero from '../layouts/Hero.astro';
-import ImageGaucheTextDroite from '../components/ImageGaucheTextDroite.astro';
-import ImageDroiteTextGauche from '../components/ImageDroiteTextGauche.astro';
-import ImageFull from '../components/ImageFull.astro';
-import DoubleText from '../components/DoubleText.astro';
-import TripleText from '../components/TripleText.astro';
-import '../styles/base.scss';
-import '../styles/bloc.scss';
-import '../styles/container.scss';
-import '../styles/global.scss';
-import '../styles/footer.scss';
-import '../styles/text.scss';
-import { gsap } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import Projects from '@layouts/Projects.astro';
+import Project from '@components/Project.astro';
+import Variables from '@components/Variables.astro';
+import Hero from '@layouts/Hero.astro';
+import ImageGaucheTextDroite from '@components/ImageGaucheTextDroite.astro';
+import ImageDroiteTextGauche from '@components/ImageDroiteTextGauche.astro';
+import ImageFull from '@components/ImageFull.astro';
+import DoubleText from '@components/DoubleText.astro';
+import TripleText from '@components/TripleText.astro';
+import '@styles/main.scss';
 ---
+
+<script>
+   import gsap from 'gsap';
+   import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+   gsap.registerPlugin(ScrollTrigger);
+
+	console.log(ScrollTrigger);
+</script>
+
 <Layout title="Welcome to Astro.">
 	<Hero/>
 	<main>
@@ -58,16 +60,18 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 		<ImageDroiteTextGauche/>
 	</div>
 		<div class="ct100">
-			<ImageFull/>
+			<ImageFull src="/assets/images/full.jpg" alt="test"/>
 		</div>
 		<div class="ct">
-			<DoubleText/>
+			<DoubleText
+			bodyG="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			bodyD="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+			/>
 		</div>
 
 		<div class="ct">
 			<TripleText/>
 		</div>
-		
 
 		<div class="ct">
 			<h2>Bloc lien</h2>
@@ -121,4 +125,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 	}
 
 </style>
+
+	
 

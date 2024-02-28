@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import myImage from "../assets/images/nopic.jpg"; 
+// import myImage from "/assets/images/nopic.jpg"; 
 ---
 
         <h2>Image gauche</h2>
@@ -11,6 +11,6 @@ import myImage from "../assets/images/nopic.jpg";
                 </p>
             </div>
             <div class="contenuMixteImageD">
-                <Image src={myImage} alt="La description de mon image." />
+                <Image src="/assets/images/full.jpg"  width="200"   height="150" alt="La description de mon image." />
             </div>
         </div>
