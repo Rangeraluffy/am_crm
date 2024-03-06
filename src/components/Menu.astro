@@ -1,0 +1,44 @@
+<script>
+    import gsap from "gsap";
+    //    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+    //    gsap.registerPlugin(ScrollTrigger);
+
+    // console.log(ScrollTrigger);
+    document.addEventListener("DOMContentLoaded", function () {
+        const burgerMenu = document.querySelector(".hamburger-wrap");
+        const menu = document.getElementById("menu");
+        const leftMenu = document.querySelector(".left-menu");
+        const rightMenu = document.querySelector(".right-menu");
+        const tl = gsap.timeline();
+        tl.to(rightMenu, {
+            top: 0,
+        });
+        tl.to(leftMenu, {
+            top: 0,
+        });
+        tl.to(".test", {
+            opacity: 0,
+        });
+        tl.pause(0);
+        burgerMenu.addEventListener("click", function () {
+            this.classList.toggle("active");
+            if (this.classList.contains("active")) {
+                tl.play();
+            } else {
+                tl.reverse();
+            }
+        });
+    });
+</script>
+
+<nav>
+    <div class="logo">Logo</div>
+    <div class="hamburger-wrap">
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+<div id="menu" class="menu">
+    <div class="left-menu"><a class="test">test</a></div>
+    <div class="right-menu">Right Menu Content</div>
+</div>

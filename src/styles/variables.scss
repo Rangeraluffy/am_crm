@@ -6,18 +6,26 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'Recoleta-Light';
+    src: url('/fonts/Recoleta-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
 // ----------------------
 // Couleurs
 // ----------------------
 
-$primary-color: white;
+$primary-color: #efefef;
 $secondary-color: red;
 $color-btn-primary: grey;
 $color-btn-secondary: grey;
 
 // à ne pas supprimer
 
-$c-black: #000000;
+$c-black: #333;
 $c-white: #ffffff;
 
 $c-valid: #2ed573;
