@@ -1,0 +1,176 @@
+@import "../variables";
+
+/*----------
+MENU
+-----------*/
+header{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 140px 0px 140px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    z-index: 7500;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    flex-direction: row-reverse;
+
+    nav {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%;
+
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+      }
+      
+      .hamburger-wrap {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      
+        span {
+          height: 2px;
+          width: 35px;
+          background: white;
+          transition: opacity 0.1s ease, transform 0.3s ease;
+      
+          &:nth-child(1) {
+            transform: translate3d(-50%, -6px, 0);
+          }
+      
+          &:nth-child(2) {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+      
+        &.active {
+          z-index: 9999;
+      
+          span {
+            height: 2px;
+            width: 35px;
+            background: red;
+            transition: opacity 0.1s ease, transform 0.3s ease;
+      
+            &:nth-child(1) {
+              transform: translate3d(-50%, 50%, 0) rotate(45deg);
+            }
+      
+            &:nth-child(2) {
+              transform: translate3d(-50%, 50%, 0) rotate(-45deg);
+            }
+          }
+        }
+      }
+      
+      .menu {
+        z-index: 99;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: left 0.5s ease;
+        display: flex;
+        pointer-events: none;
+      
+        .left-menu {
+          position: absolute;
+          height: 80vh;
+          background-color: #faf8f5;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding-left: 5%;
+          padding-right: 10%;
+          display: flex;
+          width: 50%;
+          transition: height 0.5s ease;
+          top: -80vh;
+          left: 0;
+        }
+      
+        .right-menu {
+          position: absolute;
+          height: 80vh;
+          background-color: #faf8f5;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding-left: 5%;
+          padding-right: 10%;
+          display: flex;
+          width: 50%;
+          transition: height 0.5s ease;
+          top: -80vh;
+          right: 0;
+          pointer-events: fill;
+      
+          .menu-column {
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
+      
+            .menu-item{
+              font-family: 'Recoleta-Regular';
+          font-size: 42px;
+          text-decoration: none;
+          color: black;
+          opacity: 0;
+          line-height: 1.8;
+            }
+          }
+        }
+      
+        .right-menu {
+          background-color: #ddd;
+        }
+      
+        &.show-menu {
+          left: 0;
+        }
+      
+        &.menu-open {
+      
+          .left-menu,
+          .right-menu {
+            width: 100%;
+            height: 80vh;
+          }
+        }
+      
+        .left-menu.expand,
+        .right-menu.expand {
+          height: 80vh;
+          /* Hauteur finale */
+        }
+      }
+}
+
+
+.hero{
+  height: 100vh;
+
+  .hero-text-wrap{
+    max-width: 80%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    display: flex;
+    height: 100%;
+  }
+}

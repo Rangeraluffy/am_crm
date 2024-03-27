@@ -1,3 +1,8 @@
+---
+import  '@styles/components/header.scss';
+
+const { adressemail } = Astro.props;
+--- 
 <script>
     import gsap from "gsap";
     //    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -16,8 +21,8 @@
         tl.to(leftMenu, {
             top: 0,
         });
-        tl.to(".test", {
-            opacity: 0,
+        tl.to(".menu-item", {
+            opacity: 1,
         });
         tl.pause(0);
         burgerMenu.addEventListener("click", function () {
@@ -27,18 +32,32 @@
             } else {
                 tl.reverse();
             }
-        });
+        }); 
     });
+   
 </script>
 
-<nav>
-    <div class="logo">Logo</div>
-    <div class="hamburger-wrap">
-        <span></span>
-        <span></span>
+<header>
+    <nav>
+        <div class="logo">Logo</div>
+        <div class="hamburger-wrap">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div id="menu" class="menu">
+        <div class="left-menu">
+            <a class="test">{adressemail}</a>
+        </div>
+        <div class="right-menu">
+            <div class="menu-column">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">About</a>
+                <a href="#" class="menu-item">Works</a>
+                <a href="#" class="menu-item">Contact</a>
+            </div>
+    
+        </div>
     </div>
-</nav>
-<div id="menu" class="menu">
-    <div class="left-menu"><a class="test">test</a></div>
-    <div class="right-menu">Right Menu Content</div>
-</div>
+    
+</header>

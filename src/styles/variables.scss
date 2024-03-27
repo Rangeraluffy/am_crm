@@ -1,32 +1,44 @@
-@font-face {
-    font-family: 'Raleway-Medium';
-    src: url('/fonts/Raleway-Medium.otf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-  @font-face {
-    font-family: 'Recoleta-Light';
-    src: url('/fonts/Recoleta-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+// @font-face {
+//     font-family: 'Raleway-Medium';
+//     src: url('/fonts/Raleway-Medium.otf');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+
+//   @font-face {
+//     font-family: 'Recoleta-Light';
+//     src: url('/fonts/Recoleta-Light.ttf');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+
+
+// ----------------------
+// POLICE
+// ----------------------
+$nunito: "Nunito Sans", sans-serif;
+$raleway: "Raleway", sans-serif;
+$biryani: "Biryani", sans-serif;
 
 // ----------------------
 // Couleurs
 // ----------------------
 
-$primary-color: #efefef;
-$secondary-color: red;
-$color-btn-primary: grey;
-$color-btn-secondary: grey;
+$primary-color: #08090A;
+$secondary-color: #A7A2A9;
+$color-btn-primary: #222823;
+$color-btn-secondary: #020202;
 
 // à ne pas supprimer
 
-$c-black: #333;
-$c-white: #ffffff;
+$c-black: black;
+$c-white: #F4F7F5;
 
 $c-valid: #2ed573;
 $c-alert: #f9a94c;
@@ -77,3 +89,19 @@ $marginThin: 50px;
 $marginNormal: 150px;
 $marginFat : 300px;
 
+
+//-------------
+// FONT SIZE
+//-------------
+$fontSizeH1: 56px;
+$fontSizeH2: 50px;
+$fontSizeH3: 45px;
+$fontSizeHref: 20px;
+$fontSizeparagraphe: 20px;
+
+// ----------------------
+// LINE HEIGHT
+// ----------------------
+
+$lineHeightTitle: 1.1;
+$lineHeightParagraphe: 1.3;

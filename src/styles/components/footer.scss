@@ -1,0 +1,22 @@
+@import "../variables";
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+
+    .column-footer{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        a{
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: $fontSizeHref;
+
+            &:hover{
+                color: $color-btn-primary;
+            }
+        }
+    }
+}

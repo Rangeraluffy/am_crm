@@ -2,257 +2,146 @@
 IMAGE GAUCHE TEXTE DROIT
 -----------*/
 
-.conteneurBlocImgTxt{
-    display: flex;
-    align-items: flex;
-    column-gap: 50px;
+.conteneurBlocImgTxt {
+  display: flex;
+  align-items: flex;
+  column-gap: 50px;
 
-    .contenuMixteImageG{
-        width: 50%;
+  .contenuMixteImageG {
+    width: 50%;
 
-        img{
-            width: 100%;
-            height: 100%;
-        }
-
-        @include for-size(big-tablet) {
-            width: 100%;
-         }
-    }
-
-    .contenuMixteTexteD{
-        width: 50%;
-
-        @include for-size(big-tablet) {
-            width: 100%;
-         }
+    img {
+      width: 100%;
+      height: 100%;
     }
 
     @include for-size(big-tablet) {
-       flex-direction: column;
+      width: 100%;
     }
+  }
+
+  .contenuMixteTexteD {
+    width: 50%;
+
+    @include for-size(big-tablet) {
+      width: 100%;
+    }
+  }
+
+  @include for-size(big-tablet) {
+    flex-direction: column;
+  }
 }
 
 /*----------
 IMAGE DROITE TEXTE GAUCHE
 -----------*/
 
-.conteneurBlocImgTxt{
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
+.conteneurBlocImgTxt {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
 
-    .contenuMixteTexteG{
-        width: 50%;
+  .contenuMixteTexteG {
+    width: 50%;
 
-        @include for-size(big-tablet) {
-            width: 100%;
-         }
+    @include for-size(big-tablet) {
+      width: 100%;
     }
+  }
 
-    .contenuMixteImageD{
-        width: 50%;
+  .contenuMixteImageD {
+    width: 50%;
 
-        img{
-            width: 100%;
-            height: 100%;
-        }
-
-        @include for-size(big-tablet) {
-            width: 100%;
-         }
+    img {
+      width: 100%;
+      height: 100%;
     }
 
     @include for-size(big-tablet) {
-        flex-direction: column;
-     }
+      width: 100%;
+    }
+  }
+
+  @include for-size(big-tablet) {
+    flex-direction: column;
+  }
 }
 
 /*----------
 IMAGE FULL
 -----------*/
 
-.imageFull{
-    img{
-        width: 100%;
-        height: 100vh;
+.imageFull {
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 
-        @include for-size(tablet) {
-           height: 100%;
-        }
+    @include for-size(tablet) {
+      height: 100%;
     }
+  }
 }
 
 /*----------
 DOUBLE COLUMN TEXT
 -----------*/
 
-.double-columnText{
-    display: flex;
-    column-gap: 50px;
+.double-columnText {
+  display: flex;
+  column-gap: 50px;
 
-    @include for-size(big-tablet) {
-        flex-direction: column;
-     }
+  @include for-size(big-tablet) {
+    flex-direction: column;
+  }
 }
 
 /*----------
 TRIPLE COLUMN TEXT
 -----------*/
 
-.triple-columnText{
-    display: grid;
-    column-gap: 50px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+.triple-columnText {
+  display: grid;
+  column-gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-    @include for-size(big-tablet) {
-        grid-template-columns: repeat(2,1fr);
-     }
+  @include for-size(big-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include for-size(tablet) {
-        grid-template-columns: repeat(1,1fr);
-     }
+  @include for-size(tablet) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-
-
 
 
 /*----------
-MENU
------------*/
-
-nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-  }
-  
-  .hamburger-wrap {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  
-    span {
-        height: 2px;
-        width: 35px;
-        background: white;
-        transition: opacity 0.1s ease, transform 0.3s ease;
-
-        &:nth-child(1){
-            transform: translate3d(-50%, -6px, 0);
-        }
-        &:nth-child(2){
-            transform: translate3d(-50%, 0, 0);
-        }
-    }
-&.active{
-      z-index: 9999;
-        span {
-            height: 2px;
-            width: 35px;
-            background: red;
-            transition: opacity 0.1s ease, transform 0.3s ease;
-    
-            &:nth-child(1){
-                transform: translate3d(-50%, 50%, 0) rotate(45deg);
-            }
-            &:nth-child(2){
-                transform: translate3d(-50%, 50%, 0) rotate(-45deg);
-            }
-        }
-}
-}
-  
-  .menu {
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: flex-start;
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: left 0.5s ease; 
-    display: flex;
-    pointer-events: none;
-
-    .left-menu {
-      position: absolute;
-      height: 80vh;
-      background-color: grey;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding-left: 5%;
-      padding-right: 10%;
-      display: flex;
-      width: 50%;
-      transition: height 0.5s ease;
-      top: -80vh;
-    left: 0;
-    }
-
-    .right-menu {
-      position: absolute;
-      height: 80vh;
-      background-color: grey;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding-left: 5%;
-      padding-right: 10%;
-      display: flex;
-      width: 50%;
-      transition: height 0.5s ease;
-      top: -80vh;
-    right: 0;
-    }
-  
-    .right-menu {
-      background-color: #ddd;
-    }
-  
-    &.show-menu {
-      left: 0;
-    }
-  
-    &.menu-open {
-      .left-menu, .right-menu {
-        width: 100%;
-        height: 80vh;
-      }
-    }
-
-    .left-menu.expand, 
-    .right-menu.expand {
-      height: 80vh; /* Hauteur finale */
-    }
-  }
-
-  /*----------
 HORIZONTAL SCROLL
 -----------*/
 
-  .container {
+.container {
   width: 400%;
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
 
-  .panel{
+  .panel {
     width: 100vw;
     background-color: grey;
+
+    .content-panel{
+      max-width: none;
+    justify-content: center;
+    align-self: center;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    }
   }
 }
 

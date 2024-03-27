@@ -1,0 +1,132 @@
+.btn {
+    text-decoration: none;
+    text-align: center;
+    background: #222823;
+    color: $c-white;
+    display: inline-block;
+    margin: 16px 0;
+    border-radius: 50px;
+    transition: color 1s ease-in-out;
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 17px 32px;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        z-index: -1;
+        border-radius: 50%;
+        background-color: $color-btn-secondary;
+        transform-origin: center;
+        transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    &:hover {
+        color: $c-white;
+    }
+
+    &:hover:before {
+        transform: translate3d(50%, -50%, 0) scale3d(30, 20, 20);
+    }
+}
+
+.btnHoverGauche {
+    text-decoration: none;
+    text-align: center;
+    background: #222823;
+    color: $c-white;
+    display: inline-block;
+    margin: 16px 0;
+    border-radius: 50px;
+    transition: color 0.4s ease-in-out, transform 0.45s ease-in-out; // Regroupement des transitions
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 17px 32px;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: $color-btn-secondary;
+        transform-origin: center;
+        transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    &:hover {
+        color: $c-white;
+    }
+
+    &:hover:before {
+        transform: translate3d(50%, -50%, 0) scale3d(20, 20, 20);
+    }
+}
+
+.btnHoverDroite{
+    text-decoration: none;
+    text-align: center;
+    background: #222823;
+    color: $c-white;
+    display: inline-block;
+    margin: 16px 0;
+    border-radius: 50px;
+    transition: color 0.4s ease-in-out;
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 17px 32px;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: $color-btn-secondary;
+        transform-origin: center;
+        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    &:hover {
+        color: $c-white;
+    }
+
+    &:hover:before {
+        transform: translate3d(-50%, -50%, 0) scale3d(20, 20, 20);
+    }
+}
+
