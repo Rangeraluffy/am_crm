@@ -5,6 +5,15 @@ h1{
     font-family: $nunito;
     margin-top: 0px;
     font-weight: $fw-reg;
+    font-size: 78px;
+}
+
+.h1-title{
+    line-height: $lineHeightTitle;
+    color: $c-white;
+    font-family: $raleway;
+    font-weight: $fw-light;
+    font-size: 78px;
 }
 
 h2{
@@ -13,7 +22,10 @@ h2{
     color: $c-white;
     font-family: $raleway;
     font-weight: $fw-light;
+    font-size: 45px;
 }
+
+
 
 h3{
     font-size: $fontSizeH3;
@@ -30,7 +42,8 @@ p{
     color: $c-white;
     font-family: $biryani;
     font-weight: $fw-light;
-
+    margin: 0px;
+    
     @include for-size(tablet) {
         font-size: 18px;
         line-height: 1.5;

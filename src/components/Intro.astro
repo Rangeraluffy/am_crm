@@ -1,0 +1,25 @@
+---
+import  '@styles/components/intro.scss';
+
+import { Image } from 'astro:assets';
+
+
+interface Props {
+	src: string;
+    alt: string;
+}
+
+const { src, alt } = Astro.props;
+--- 
+
+<div class="ct">
+    <h2>Vous souhaitez avoir une présence en ligne sans le tracas de la conception de votre site web ? Notre prestation clé en main est la solution idéale pour vous !</h1>
+    <div class="flex-intro-homepage">
+        <div class="left">
+            <p>Nous comprenons que vous n'avez ni le temps ni l'envie de vous plonger dans la création de votre site internet. C'est pourquoi nous prenons en charge l'intégralité de votre projet, vous permettant ainsi de vous concentrer sur ce qui compte vraiment pour votre entreprise.</p>
+        </div>
+        <div class="right">
+            <Image src={src}  width="200"   height="150" alt={alt} />
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@
 footer{
     display: flex;
     flex-wrap: wrap;
+    padding: 50px 0px;
 
     .column-footer{
         display: flex;
@@ -10,9 +11,11 @@ footer{
         flex-grow: 1;
 
         a{
-            color: $secondary-color;
+            color: $c-white;
             text-decoration: none;
             font-size: $fontSizeHref;
+            font-family: $raleway;
+            font-weight: 300;
 
             &:hover{
                 color: $color-btn-primary;

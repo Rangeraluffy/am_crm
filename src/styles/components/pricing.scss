@@ -1,0 +1,26 @@
+@import "../variables";
+
+.offers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 100px;
+    .card-offer{
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 20px 0px;
+        p{
+            color: black;
+        }
+        .header-desc{
+           p{
+            &::before{
+                content: "V";
+            }
+           }
+        }
+    }
+}

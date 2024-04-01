@@ -3,6 +3,104 @@
 ---
 
 
-<div class="left">
-  
-</div>
+<script>
+    import gsap from "gsap";
+   import ScrollTrigger from "gsap/dist/ScrollTrigger";
+   gsap.registerPlugin(ScrollTrigger);
+
+gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
+
+var images = gsap.utils.toArray('.panel');
+
+images.forEach((image, i) => {
+ 
+ var tl = gsap.timeline({
+   
+   scrollTrigger: {
+     trigger: "section.section-scroll-text-img",
+     start: () => "top -" + (window.innerHeight*(i+0.5)),
+     end: () => "+=" + window.innerHeight,
+     scrub: true,
+     toggleActions: "play none reverse none",
+     invalidateOnRefresh: true,     
+   }
+   
+ })
+ 
+ tl
+ .to(image, { height: 0 })
+ ;
+ 
+});
+
+
+
+gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
+
+var texts = gsap.utils.toArray('.panel-text');
+
+texts.forEach((text, i) => {
+ 
+ var tl = gsap.timeline({
+   
+   scrollTrigger: {
+     trigger: "section.section-scroll-text-img",
+     start: () => "top -" + (window.innerHeight*i),
+     end: () => "+=" + window.innerHeight,
+     scrub: true,
+     toggleActions: "play none reverse none",
+     invalidateOnRefresh: true,     
+   }
+   
+ })
+ 
+ tl
+ .to(text, { duration: 0.33, opacity: 1, y:"50%" })  
+ .to(text, { duration: 0.33, opacity: 0, y:"0%" }, 0.66)
+ ;
+ 
+});
+
+
+ScrollTrigger.create({
+
+   trigger: "section.section-scroll-text-img",
+   scrub: true,
+   markers: true,
+   pin: true,
+   start: () => "top top",
+   end: () => "+=" + ((images.length + 1) * window.innerHeight),
+   invalidateOnRefresh: true,
+
+});
+</script>
+     
+ 
+ <section class="section-scroll-text-img">
+   
+   <div class="text-wrap">          
+     <div class="panel-text blue-text">
+        <h2>Landing Page ou site Vitrine</h2>
+    </div>   
+     <div class="panel-text orange-text">
+        <h2>Landing Page ou site Vitrine</h2>    
+    </div> 
+     <div class="panel-text purple-text">
+        <h2>Landing Page ou site Vitrine</h2>    
+    </div> 
+   </div>
+   
+   <div class="p-wrap">
+     <div class="panel-scroll-right">
+        <img src="/assets/images/landingpage.jpg">    
+    </div> 
+     <div class="panel-scroll-right">
+        <img src="/assets/images/maintenance.jpg">    
+        </div> 
+     <div class="panel-scroll-right">
+        <img src="/assets/images/maintenance.jpg">     
+    </div> 
+   </div>
+   
+ </section>
+ 

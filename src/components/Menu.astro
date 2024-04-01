@@ -34,10 +34,19 @@ const { adressemail } = Astro.props;
             }
         }); 
     });
+
+    window.addEventListener('scroll', function() {
+    var header = document.getElementById('myHeader');
+    if (window.scrollY > 0) {
+        header.classList.add('header-scroll');
+    } else {
+        header.classList.remove('header-scroll');
+    }
+});
    
 </script>
 
-<header>
+<header id="myHeader">
     <nav>
         <div class="logo">Logo</div>
         <div class="hamburger-wrap">
@@ -47,7 +56,7 @@ const { adressemail } = Astro.props;
     </nav>
     <div id="menu" class="menu">
         <div class="left-menu">
-            <a class="test">{adressemail}</a>
+            <a class="adresse-mail-header">{adressemail}</a>
         </div>
         <div class="right-menu">
             <div class="menu-column">

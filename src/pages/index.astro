@@ -1,18 +1,15 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Header from '@layouts/Header.astro';
-import Card from '@components/Card.astro';
+import Menu from '@components/Menu.astro';
 import Hero from '@layouts/Hero.astro';
+import Intro from '@components/Intro.astro';
 import HorizontalScroll from '@components/HorizontalScroll.astro';
-import ImageGaucheTextDroite from '@components/ImageGaucheTextDroite.astro';
-import ImageDroiteTextGauche from '@components/ImageDroiteTextGauche.astro';
-import ImageFull from '@components/ImageFull.astro';
-import DoubleText from '@components/DoubleText.astro';
-import TripleText from '@components/TripleText.astro';
+import Pricing from '@components/Pricing.astro';
+import Project from '@components/Project.astro';
+import ScrollRightGsap from '@components/ScrollRightGsap.astro';
 import Footer from '@layouts/Footer.astro';
 import Crosslink from '@layouts/Crosslink.astro';
-import ScrollRightGsap from '@components/ScrollRightGsap.astro';
-import Menu from '@components/Menu.astro';
+
 import '@styles/main.scss';
 ---
 
@@ -20,20 +17,6 @@ import '@styles/main.scss';
    import gsap from 'gsap';
    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
    gsap.registerPlugin(ScrollTrigger);
-
-	// console.log(ScrollTrigger);
-
-// 	gsap.from('#scrollOpacity', {
-//     opacity: 0, // Opacité de départ à 0
-//     // duration: 1, // Durée de l'animation
-//     scrollTrigger: {
-//         trigger: '#scrollOpacity',
-//         start: 'top center', 
-//         end: 'bottom center',
-//         scrub: true, 
-//         markers: false 
-//     }
-// });
 
 </script>
 
@@ -43,13 +26,56 @@ import '@styles/main.scss';
 	<Menu adressemail="alexandre.marolleau@hotmail.fr">
 
 	</Menu>
-	<!-- <div class="ct100">
-		<ImageFull src="/assets/images/header-homepage.jpg" alt="test"/>
-	</div> -->
-	<div class="ct100">
-		<Hero title="Bienvenue chez AM Créations  - Création de site internet a Annecy "/>
-	</div>
+
 </Layout>
+
+<div class="ct100">
+	<Hero title="Bienvenue chez AM Créations  - Création de site internet a Annecy "/>
+</div>
+
+<div class="ct100 intro-homepage padding-top-big padding-bottom-big">
+	<Intro src="/assets/images/no-time.jpg" alt="test"/>
+</div>
+
+<div class="ct">
+	<Pricing/>
+</div>
+
+<div class="ct padding-top-big padding-bottom-big">
+	<Project/>
+</div>
+
+<div class="ct100">
+	<ScrollRightGsap/>
+</div>
+
+
+<HorizontalScroll>
+	<div class="ct-carrousel" slot="panel-1">
+			<div class="ct-carrousel-left">
+				img
+			   </div>
+			   <div class="ct-carrousel-right">
+					<h2>La création de votre site internet landing page ou vitrine </h2>
+			</div>
+	</div>
+	<div class="ct-carrousel" slot="panel-2">
+		<div class="ct-carrousel-left">
+			img
+		   </div>
+		   <div class="ct-carrousel-right">
+				<h2>La maintenance du site internet </h2>
+		</div>
+</div>
+<div class="ct-carrousel" slot="panel-3">
+	<div class="ct-carrousel-left">
+		img
+	   </div>
+	   <div class="ct-carrousel-right">
+			<h2>La gestion de l'hébergement </h2>
+	</div>
+</div>
+</HorizontalScroll>
 
 
 <div class="ct">
@@ -61,30 +87,3 @@ import '@styles/main.scss';
 <div class="ct">
 	<Crosslink/>
 </div>
-
-<style>
-
-
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-
-</style>

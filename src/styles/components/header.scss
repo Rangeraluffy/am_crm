@@ -3,10 +3,14 @@
 /*----------
 MENU
 -----------*/
+
+.header-scroll{
+  background-color: #08090A;
+}
 header{
     width: 100%;
     box-sizing: border-box;
-    padding: 50px 140px 0px 140px;
+    padding: 10px 50px 10px 50px;
     display: flex;
     align-items: center;
     background: transparent;
@@ -56,11 +60,11 @@ header{
           span {
             height: 2px;
             width: 35px;
-            background: red;
+            background: $c-black;
             transition: opacity 0.1s ease, transform 0.3s ease;
       
             &:nth-child(1) {
-              transform: translate3d(-50%, 50%, 0) rotate(45deg);
+              transform: translate3d(-50%, 100%, 0) rotate(45deg);
             }
       
             &:nth-child(2) {
@@ -100,6 +104,13 @@ header{
           transition: height 0.5s ease;
           top: -80vh;
           left: 0;
+
+          .adresse-mail-header{
+            font-family: $raleway;
+            font-size: 42px;
+            text-decoration: none;
+            color: black;
+          }
         }
       
         .right-menu {
@@ -124,7 +135,7 @@ header{
             display: flex;
       
             .menu-item{
-              font-family: 'Recoleta-Regular';
+              font-family: $raleway;
           font-size: 42px;
           text-decoration: none;
           color: black;
@@ -135,7 +146,7 @@ header{
         }
       
         .right-menu {
-          background-color: #ddd;
+          background-color: #faf8f5;
         }
       
         &.show-menu {

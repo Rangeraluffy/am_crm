@@ -1,0 +1,100 @@
+@import "../variables";
+
+.project-container{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    column-gap: 150px;
+
+    .project-container-left{
+        width: 100%;
+
+        .project{
+            padding-top: 140px;
+            img{
+                width: 100%;
+                cursor: pointer;
+                transition: transform 0.5s ease;
+
+                &:hover{
+                    transform: translateY(-15px);
+                }
+            }
+            .desc-project{
+                padding-top: 15px;
+                a{
+                    color: white;
+                    font-size: 25px;
+                    text-decoration: none;
+                    font-family: $raleway;
+                    display: inline-block;
+
+                    &:after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background: white;
+                        transition: width .3s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        //transition: width .3s;
+                      }
+                }
+
+                p{
+                    color: $secondary-color;
+                    font-family: $raleway;
+                }
+            }
+        }
+        
+    }
+
+    .project-container-right{
+        width: 100%;
+        .project{
+            img{
+                width: 100%;
+                cursor: pointer;
+                transition: transform 0.5s ease;
+
+                &:hover{
+                    transform: translateY(-15px);
+                }
+            }
+
+            .desc-project{
+                padding-top: 15px;
+                a{
+                    color: white;
+                    font-size: 25px;
+                    text-decoration: none;
+                    font-family: $raleway;
+                    display: inline-block;
+
+                    &:after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background: white;
+                        transition: width .3s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                        //transition: width .3s;
+                      }
+                }
+
+                p{
+                    color: $secondary-color;
+                    font-family: $raleway;
+                }
+            }
+        }
+
+    }
+}

@@ -1,3 +1,5 @@
+
+
 <script>
     import gsap from "gsap";
     import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -12,22 +14,25 @@
             trigger: ".container",
             pin: true,
             scrub: 1,
-            // snap: 1 / (sections.length - 1),
+             snap: 1 / (sections.length - 1),
             end: () => "+=" + document.querySelector(".container").offsetWidth,
         },
     });
 </script>
 
 <div class="firstContainer">
-    <h1>Testing horizontal scrolling w/ three sections</h1>
-    <h2>First</h2>
+    <div class="ct">
+        <h2>Pourquoi Choisir notre Solution Clés en Main ? </h2>
+        <h3>La création de votre site internet landing page ou vitrine </h3>
+    </div>
+
 </div>
 <div class="container">
-    <div class="description panel">
+    <section class="panel">
         <slot name="panel-1">
-            Test
+           
         </slot>
-    </div>
+    </section>
 
     <section class="panel">
         <slot name="panel-2">
@@ -41,4 +46,10 @@
     </section>
 
 </div>
-<div class="lastContainer"></div>
+<div class="lastContainer">
+    <div class="ct">
+        <h2>Pourquoi Choisir notre Solution Clés en Main ? </h2>
+        <h3>La création de votre site internet landing page ou vitrine </h3>
+    </div>
+
+</div>
