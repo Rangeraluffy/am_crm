@@ -310,3 +310,72 @@ SCROLL RIGHT GSAP
   }
 
 }
+
+.PinStepBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .bulletsListTxtImg{
+    position: sticky;
+    top: 0;
+    left: 15px;
+    width: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .bullet{
+      width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 20px;
+    position: relative;
+    display: block;
+    margin: 5px;
+    }
+  }
+
+  .contenuTexteColG {
+    width: 50%;
+    min-height: 1px;
+    position: relative;
+
+    .blocTxt{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .content{
+        padding: 8vh 10vw 8vh 17vw;
+      }
+    }
+  }
+
+  .contenuTexteColD{
+    width: 50%;
+    min-height: 1px;
+    overflow: hidden;
+    position: relative;
+
+    .pin-spacer{
+      .pinDiv{
+        height: 100vh !important;
+        position: absolute;
+        opacity: 0;
+        width: 100% !important;
+  
+        img{
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+    }
+
+  }
+}

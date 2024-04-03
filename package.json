@@ -13,6 +13,8 @@
     "@fontsource/comfortaa": "^5.0.18",
     "@fontsource/geologica": "^5.0.3",
     "astro": "^4.4.4",
+    "dom-utils": "^0.9.0",
+    "domutils": "^3.1.0",
     "gsap": "^3.12.5"
   },
   "devDependencies": {

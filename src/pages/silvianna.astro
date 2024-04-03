@@ -1,0 +1,30 @@
+---
+import Header from '@layouts/Header.astro';
+import Footer from '@layouts/Footer.astro';
+import Crosslink from '@layouts/Crosslink.astro';
+
+import '@styles/main.scss';
+---
+
+
+<script>
+    import gsap from 'gsap';
+    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+ 
+ </script>
+
+<Header/>
+
+ 
+<div class="header-projects">
+    <div class="header-left-project">
+        <h2 class="color-black">Silvianna beauty</h2>
+    </div>
+    <div class="header-right-project">
+        <img src="/assets/images/silvianna-project.jpg">   
+    </div>
+</div>
+
+<Footer/>
+<Crosslink/>
