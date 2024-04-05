@@ -1,16 +1,22 @@
 ---
 import { Image } from 'astro:assets';
-// import myImage from "/assets/images/nopic.jpg"; 
+
+
+interface Props {
+	src: string;
+    alt: string;
+}
+
+const { src, alt } = Astro.props;
 ---
 
-        <h2>Image gauche</h2>
         <div class="conteneurBlocImgTxt">
             <div class="contenuMixteImageG">
-                <Image src="/assets/images/full.jpg"  width="200"   height="150" alt="La description de mon image." />
+                <Image src={src}  width="200"   height="150" alt={alt} />
             </div>
             <div class="contenuMixteTexteD" id="texteD">
+                <h2>Lorem Ipsum</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                    Chez AM Créations , nous mettons en avant notre engagement à placer le client au cœur de notre approche. Nous travaillons en étroite collaboration avec vous pour comprendre vos objectifs en ligne. Que vous recherchiez une présence vitrine élégante pour votre entreprise ou une page de destination percutante pour convertir vos visiteurs en clients, notre expertise se concentre exclusivement sur la création de sites vitrines et de landing pages. Nous sommes là pour transformer vos idées en réalité et vous aider à atteindre vos objectifs en ligne                </p>
             </div>
         </div>
