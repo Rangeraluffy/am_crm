@@ -32,6 +32,10 @@ header{
       
       .logo {
         font-size: 1.5rem;
+
+        img{
+          width: 5%;
+        }
       }
       
       .hamburger-wrap {
@@ -40,7 +44,7 @@ header{
         cursor: pointer;
       
         span {
-          height: 2px;
+          height: 1px;
           width: 35px;
           background: white;
           transition: opacity 0.1s ease, transform 0.3s ease;
@@ -58,7 +62,7 @@ header{
           z-index: 9999;
       
           span {
-            height: 2px;
+            height: 1px;
             width: 35px;
             background: $c-black;
             transition: opacity 0.1s ease, transform 0.3s ease;
@@ -141,6 +145,10 @@ header{
           color: black;
           opacity: 0;
           line-height: 1.8;
+
+          &:hover{
+            color: $secondary-color;
+          }
             }
           }
         }
@@ -173,15 +181,28 @@ header{
 
 .hero{
   height: 100vh;
-
-  .hero-text-wrap{
-    max-width: 80%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    display: flex;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  .hero-left{
+    width: 50%;
+    .hero-text-wrap{
+      max-width: 80%;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      display: flex;
+      height: 100%;
+    }
   }
+
+  .hero-right{
+    width: 50%;
+
+    img{
+      width: 80%;
+    }
+  }
+ 
 }

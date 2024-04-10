@@ -4,47 +4,62 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    column-gap: 10px;
+
     .card-offer{
-        border-color: #35454c;
-        border-width: 2px !important;
-        border-style: solid;
-        border-radius: 10px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        row-gap: 40px;
-        padding: 20px 0px;
-        width: 40%;
-        background: #08090A;
-        p{
-            color: $c-white;
+        background-color: $c-white;
+        width: 20%;
+        position: relative;
+        border-radius: 5px;
+
+        .encart-offer{
+            position: absolute;
+            background-color: #FF725E;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 50px;
+            border-radius: 5px;
         }
-        .header-desc{
+        .content-offer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 0px;
            p{
-            &::before{
-                content: "V";
+            color: $c-black;
+           }
+
+           .price{
+            padding-bottom: 50px;
+            padding-top: 25px;
+            font-size: 50px;
+           }
+           .desc-offer{
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 100%;
+            &:first-child{
+                padding-top: 50px;
             }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 0.5rem;
+                    fill: none;
+                    stroke: #10B981;
+                    stroke-width: 1.5;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
            }
         }
-
-        &:nth-child(1),
-        &:nth-child(3){
-            padding: 2rem;
-            text-align: left;
-            width: 30%;
-        }
-
-        &:nth-child(1){
-            transform: translateX(50px);
-        }
-
-        &:nth-child(3){
-            transform: translateX(-50px);
-        }
-    }
-
-    .text-green{
-        color: green;
     }
 }
+
+
+ 
+

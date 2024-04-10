@@ -10,6 +10,21 @@ footer{
         flex-direction: column;
         flex-grow: 1;
 
+        h4{
+            color: white;
+            position: relative;
+            &:before{
+                content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: $secondary-color;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+            }
+        }
+
         a{
             color: $c-white;
             text-decoration: none;
@@ -18,7 +33,7 @@ footer{
             font-weight: 300;
 
             &:hover{
-                color: $color-btn-primary;
+                color: $secondary-color;
             }
         }
     }

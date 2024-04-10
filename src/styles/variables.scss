@@ -10,20 +10,20 @@
 //     font-display: swap;
 //   }
 
-//   @font-face {
-//     font-family: 'Recoleta-Light';
-//     src: url('/fonts/Recoleta-Light.ttf');
-//     font-weight: normal;
-//     font-style: normal;
-//     font-display: swap;
-//   }
+  @font-face {
+    font-family: 'Recoleta-Light';
+    src: url('/fonts/Fredoka-VariableFont_wdth,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
 
 // ----------------------
 // POLICE
 // ----------------------
-$nunito: "Nunito Sans", sans-serif;
-$raleway: "Raleway", sans-serif;
+$nunito: "Recoleta-Light", sans-serif;
+$raleway: "Recoleta-Light", sans-serif;
 $biryani: "Biryani", sans-serif;
 
 // ----------------------
@@ -31,10 +31,9 @@ $biryani: "Biryani", sans-serif;
 // ----------------------
 
 $primary-color: #08090A;
-$secondary-color: #919191;
+$secondary-color: #FF725E;
 $color-btn-primary: #222823;
 $color-btn-secondary: #020202;
-
 // à ne pas supprimer
 
 $c-black: black;
@@ -96,7 +95,7 @@ $fontSizeH1: 56px;
 $fontSizeH2: 50px;
 $fontSizeH3: 45px;
 $fontSizeHref: 20px;
-$fontSizeparagraphe: 20px;
+$fontSizeparagraphe: 16px;
 
 // ----------------------
 // LINE HEIGHT

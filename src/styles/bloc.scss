@@ -152,10 +152,11 @@ HORIZONTAL SCROLL
 
 .ct-carrousel {
   height: 100%;
-  max-width: 70%;
+  max-width: 80%;
   display: flex;
   align-items: center;
   margin: auto;
+  column-gap: 100px;
 
   .ct-carrousel-left {
     width: 50%;
@@ -165,6 +166,10 @@ HORIZONTAL SCROLL
     width: 50%;
 
     h2 {
+      color: $c-black;
+    }
+
+    p{
       color: $c-black;
     }
   }
