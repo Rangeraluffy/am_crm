@@ -6,6 +6,12 @@ MENU
 
 .header-scroll{
   background-color: #08090A;
+
+  .logo{
+    img{
+      width: 10%;
+    }
+  }
 }
 header{
     width: 100%;
@@ -31,10 +37,9 @@ header{
       }
       
       .logo {
-        font-size: 1.5rem;
 
         img{
-          width: 5%;
+          width: 25%;
         }
       }
       

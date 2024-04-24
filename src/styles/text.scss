@@ -22,7 +22,7 @@ h2{
     color: $c-white;
     font-family: $recoletaSemiBold;
     font-weight: $fw-light;
-    font-size: 60px;
+    font-size: 45px;
 }
 
 
@@ -41,7 +41,7 @@ p{
     margin-bottom: 0px;
     color: $c-white;
     font-family: $biryani;
-    font-weight: $fw-light;
+    font-weight: $fw-reg;
     margin: 0px;
     
     @include for-size(tablet) {

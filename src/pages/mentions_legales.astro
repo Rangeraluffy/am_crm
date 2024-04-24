@@ -1,6 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import '@styles/main.scss';
+import Header from "@layouts/Header.astro";
+import Footer from "@layouts/Footer.astro";
+import Crosslink from "@layouts/Crosslink.astro";
+import "@styles/main.scss";
 
 
 const mentionsLegales = {
@@ -34,8 +37,10 @@ const mentionsLegales = {
   
 </script>
 
+<Header />
+
 <Layout title="Mentions">
-    <div class="ct">
+    <div class="ct padding-top-big">
         <div class="mentions">
             <h1>Mentions légales</h1>
             <p>
@@ -624,6 +629,11 @@ const mentionsLegales = {
     
 </Layout>
 
+<div class="ct">
+    <Footer />
+</div>
+
+<Crosslink />
 
 <style>
 

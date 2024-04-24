@@ -116,7 +116,7 @@
                 align-self: flex-start;
                 margin-top: 0;
                 padding-bottom: 10px;
-                font-family: Recoleta, Georgia, sans-serif;
+                font-family: $recoletaSemiBold;
                 font-size: 62px;
                 line-height: 1.1;
             }
@@ -221,6 +221,35 @@
             h2 {
                 color: $c-black;
             }
+        }
+    }
+}
+
+.bloc-seo {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+
+    p{
+        margin-bottom: 10px;
+    }
+
+    .voir-plus, .voir-moins {
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+
+
+.mentions{
+    a{
+        color: $c-white;
+        text-decoration: none;
+
+        &:hover{
+            color: $secondary-color;
         }
     }
 }

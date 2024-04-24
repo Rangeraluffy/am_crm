@@ -12,7 +12,7 @@
 
   @font-face {
     font-family: 'Recoleta-Light';
-    src: url('/fonts/Fredoka-VariableFont_wdth,wght.ttf');
+    src: url('/fonts/Recoleta-Regular.ttf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -20,7 +20,15 @@
 
   @font-face {
     font-family: 'Recoleta-SemiBold';
-    src: url('/fonts/Fredoka-VariableFont_wdth,wght.ttf');
+    src: url('/fonts/Recoleta-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Regular.ttf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -32,7 +40,7 @@
 // ----------------------
 $nunito: "Recoleta-Light", sans-serif;
 $raleway: "Recoleta-Light", sans-serif;
-$biryani: "Biryani", sans-serif;
+$biryani: "Raleway", sans-serif;
 $recoletaSemiBold : "Recoleta-SemiBold", "sans-serif";
 
 // ----------------------
@@ -104,7 +112,7 @@ $fontSizeH1: 56px;
 $fontSizeH2: 50px;
 $fontSizeH3: 45px;
 $fontSizeHref: 20px;
-$fontSizeparagraphe: 16px;
+$fontSizeparagraphe: 20px;
 
 // ----------------------
 // LINE HEIGHT
