@@ -1,38 +1,45 @@
 @import "../variables";
 
-footer{
+footer {
     display: flex;
     flex-wrap: wrap;
     padding: 50px 0px;
+    justify-content: space-between;
 
-    .column-footer{
+    .column-footer {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
 
-        h4{
+        h4 {
             color: white;
             position: relative;
-            &:before{
+            font-family: "Recoleta-Light", sans-serif;
+
+            &:before {
                 content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: $secondary-color;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: $secondary-color;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
             }
         }
 
-        a{
+        
+        img {
+            width: 130px;
+        }
+
+        a {
             color: $c-white;
             text-decoration: none;
-            font-size: $fontSizeHref;
+            font-size: 16px;
             font-family: $raleway;
             font-weight: 300;
 
-            &:hover{
+            &:hover {
                 color: $secondary-color;
             }
         }

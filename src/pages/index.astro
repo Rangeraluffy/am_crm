@@ -23,7 +23,7 @@ import '@styles/main.scss';
 
    document.addEventListener("DOMContentLoaded", function() {
     var voirPlusBtn = document.querySelector(".voir-plus");
-    var texte = document.querySelector(".bloc-seo p");
+    var texte = document.querySelector(".bloc-seo .voirplus");
     var estCache = true;
 
     voirPlusBtn.addEventListener("click", function() {
@@ -51,7 +51,7 @@ import '@styles/main.scss';
 </Layout>
 
 <div class="ct100">
-	<Hero title="AM Création de site internet a Annecy "/>
+	<Hero title="Création de site internet a Annecy "/>
 </div>
 
 <div class="ct100 intro-homepage padding-top-big padding-bottom-big">
@@ -106,10 +106,13 @@ import '@styles/main.scss';
 </div>
 </HorizontalScroll>
 
-<div class="ct">
+<div class="ct referencement">
 	<h2>Text de référencement</h2>
 	<div class="bloc-seo">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="voirplus" style="display:none;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
 		<button class="voir-plus">Voir +</button>
 	</div>
 </div>
@@ -120,6 +123,6 @@ import '@styles/main.scss';
 	</Layout>
 </div>
 
-<div class="ct">
+<div class="ctLarge">
 	<Crosslink/>
 </div>

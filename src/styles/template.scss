@@ -225,22 +225,42 @@
     }
 }
 
-.bloc-seo {
-    width: 100%;
-    padding: 10px;
+.referencement{
     text-align: center;
+    padding: 100px 0px;
 
-    p{
-        margin-bottom: 10px;
-    }
-
-    .voir-plus, .voir-moins {
-        display: block;
-        margin-top: 10px;
-        cursor: pointer;
+    .bloc-seo {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    
+        p{
+            margin-bottom: 10px;
+        }
+    
+        .voir-plus, .voir-moins {
+            text-decoration: none;
+            background: transparent;
+            border: none;
+            color: white;
+            margin: auto;
+            font-family: "Recoleta-Light", sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                cursor: pointer;
+        }
     }
 }
 
+
+
+.maquette{
+    img{
+        width: 90%;
+        display: flex;
+        margin: auto;
+    }
+}
 
 
 .mentions{
