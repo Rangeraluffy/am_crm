@@ -49,7 +49,7 @@ header{
         cursor: pointer;
       
         span {
-          height: 1px;
+          height: 3px;
           width: 35px;
           background: white;
           transition: opacity 0.1s ease, transform 0.3s ease;
@@ -67,7 +67,7 @@ header{
           z-index: 9999;
       
           span {
-            height: 1px;
+            height: 2px;
             width: 35px;
             background: $c-black;
             transition: opacity 0.1s ease, transform 0.3s ease;
@@ -188,8 +188,18 @@ header{
   height: 100vh;
   display: flex;
   align-items: center;
+
+  @include for-size(tablet) {
+    flex-direction: column;
+  }
+
   .hero-left{
     width: 50%;
+
+    @include for-size(tablet) {
+      width: 100%;
+    }
+
     .hero-text-wrap{
       max-width: 80%;
       justify-content: flex-start;
@@ -204,6 +214,10 @@ header{
 
   .hero-right{
     width: 50%;
+
+    @include for-size(tablet) {
+      width: 100%;
+    }
 
     svg{
       width: 60%;

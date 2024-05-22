@@ -5,11 +5,16 @@
    grid-template-columns: repeat(2, 1fr);
     column-gap: 150px;
 
+    @include for-size(tablet) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
     .project-container-left{
         width: 100%;
 
         .project{
-            padding-top: 140px;
+            padding-top: 100px;
             img{
                 width: 100%;
                 cursor: pointer;

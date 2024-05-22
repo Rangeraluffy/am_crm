@@ -6,12 +6,22 @@
     justify-content: center;
     column-gap: 5px;
 
+    @include for-size(tablet) {
+        flex-direction: column;
+        row-gap: 25px;
+      }
+
     .card-offer{
         background-color: #FAF8F5;
         position: relative;
         width: 25%;
         border-radius: 5px;
         transition: transform 0.3s ease;
+
+
+        @include for-size(tablet) {
+            width: 100%;
+          }
 
         &:hover {
           transform: translateY(-15px); 
