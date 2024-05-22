@@ -9,8 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 PinStepBlock();
 
-//Bloc Text Image
+
 function PinStepBlock() {
+  if(window.matchMedia("(max-width:1350px)").matches){ 
+    return
+  }
+
   const PinStepBlockElems = document.querySelectorAll(".PinStepBlock");
   PinStepBlockElems?.forEach((PinStepBlock) => {
     const contenuDroitElem = document.querySelector(".contenuTexteColD");

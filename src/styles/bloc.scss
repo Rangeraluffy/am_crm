@@ -288,6 +288,10 @@ SCROLL RIGHT GSAP
         position: absolute;
         width: 100% !important;
 
+        @include for-size(desktop) {
+          opacity: 1;
+       }
+
         img {
           width: 100%;
           height: 100%;
