@@ -6,6 +6,12 @@ footer {
     padding: 50px 0px;
     justify-content: space-between;
 
+    @include for-size(phone) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .column-footer {
         display: flex;
         flex-direction: column;

@@ -1,25 +1,61 @@
 ---
-import  '@styles/components/intro.scss';
+import "@styles/components/intro.scss";
 
-import { Image } from 'astro:assets';
-
+import { Image } from "astro:assets";
 
 interface Props {
-	src: string;
+    src: string;
     alt: string;
 }
 
 const { src, alt } = Astro.props;
---- 
+---
+
+<script>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/dist/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (!window.matchMedia("(max-width: 960px)").matches) {
+        document.querySelectorAll(".flex-intro-homepage, .animation-scroll-title")?.forEach((element) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    markers: false,
+                    start: "top +=65%",
+                    end: "center +=65%",
+                    once: true,
+                    pin: false,
+                    refreshPriority: 1,
+                },
+            });
+            tl.fromTo(
+                element,
+                { opacity: 0, y: "100px" },
+                { opacity: 1, y: "0px", duration: 1 },
+            );
+        });
+    }
+</script>
 
 <div class="ct">
-    <h2>Vous souhaitez avoir une présence en ligne sans le tracas de la conception de votre site web ? Notre prestation clé en main est la solution idéale pour vous !</h1>
+    <h2 class="animation-scroll-title">
+        Vous souhaitez avoir une présence en ligne sans le tracas de la
+        conception de votre site web ? Notre prestation clé en main est la
+        solution idéale pour vous !
+    </h2>
     <div class="flex-intro-homepage">
         <div class="left">
-            <p>Nous comprenons que vous n'avez ni le temps ni l'envie de vous plonger dans la création de votre site internet. C'est pourquoi nous prenons en charge l'intégralité de votre projet, vous permettant ainsi de vous concentrer sur ce qui compte vraiment pour votre entreprise.</p>
+            <p>
+                Nous comprenons que vous n'avez ni le temps ni l'envie de vous
+                plonger dans la création de votre site internet. C'est pourquoi
+                nous prenons en charge l'intégralité de votre projet, vous
+                permettant ainsi de vous concentrer sur ce qui compte vraiment
+                pour votre entreprise.
+            </p>
         </div>
         <div class="right">
-            <Image src={src}  width="200"   height="150" alt={alt} />
+            <Image src={src} width="200" height="150" alt={alt} />
         </div>
     </div>
 </div>

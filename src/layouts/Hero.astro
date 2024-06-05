@@ -1,6 +1,5 @@
 ---
 const { title } = Astro.props;
-
 ---
 
 <script>
@@ -9,28 +8,30 @@ const { title } = Astro.props;
     gsap.registerPlugin(ScrollTrigger);
 
     if (!window.matchMedia("(max-width: 1140px)").matches) {
-        document
-            .querySelectorAll(".hero-left")
-            ?.forEach((element) => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: element,
-                        markers: false,
-                        start: "top 80%",
-                        end: "+=800px 100%",
-                        once: false,
-                        pin: false,
-                        refreshPriority: 1,
-                        scrub: false,
-                    },
-                });
-                tl.fromTo(
-                    element,
-                    { opacity: 0 },
-                    { duration: 2, delay: 0.8, ease: "power1.out", opacity: 1 },
-                );
+        document.querySelectorAll(".hero-left")?.forEach((element) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    markers: false,
+                    start: "top 80%",
+                    end: "+=800px 100%",
+                    once: false,
+                    pin: false,
+                    refreshPriority: 1,
+                    scrub: false,
+                },
             });
+            tl.fromTo(
+                element,
+                { opacity: 0 },
+                { duration: 2, delay: 0.8, ease: "power1.out", opacity: 1 },
+            );
+        });
     }
+
+    //Bien vérifier que gsap, scrollTrigger et SplitText soit bien importé dans le bundle config
+
+
 </script>
 
 <div class="hero">
@@ -40,8 +41,9 @@ const { title } = Astro.props;
         </div>
     </div>
     <div class="hero-right">
-        <object type="image/svg+xml" data="/assets/images/logo-anim-am.svg" width="70%"></object>
+        <object
+            type="image/svg+xml"
+            data="/assets/images/logo-anim-am.svg"
+            width="70%"></object>
     </div>
 </div>
-
-

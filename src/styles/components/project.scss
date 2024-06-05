@@ -7,6 +7,7 @@
 
     @include for-size(tablet) {
         grid-template-columns: repeat(1, 1fr);
+        column-gap: 50px;
     }
 
 
@@ -15,6 +16,10 @@
 
         .project{
             padding-top: 100px;
+
+            @include for-size(tablet) {
+               padding-top: 50px;
+            }
             img{
                 width: 100%;
                 cursor: pointer;

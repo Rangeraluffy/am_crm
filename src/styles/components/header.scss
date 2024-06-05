@@ -191,6 +191,7 @@ header{
 
   @include for-size(tablet) {
     flex-direction: column;
+    height: 100%;
   }
 
   .hero-left{

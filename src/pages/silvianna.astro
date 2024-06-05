@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
 import Header from "@layouts/Header.astro";
 import Footer from "@layouts/Footer.astro";
 import Crosslink from "@layouts/Crosslink.astro";
@@ -27,40 +27,42 @@ import "@styles/main.scss";
             });
             tl.fromTo(
                 element,
-                { clipPath: "polygon(25% 0%, 75% 0%, 75% 100%, 25% 100%)"  , duration: 1, ease: "power1.inOut" }, // Ajout de l'option ease
-                {clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"},
+                {
+                    clipPath: "polygon(25% 0%, 75% 0%, 75% 100%, 25% 100%)",
+                    duration: 1,
+                    ease: "power1.inOut",
+                }, // Ajout de l'option ease
+                { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
             );
         });
     }
 
-if (!window.matchMedia("(max-width: 1140px)").matches) {
-    document
-        .querySelectorAll(".project-more-left img")
-        ?.forEach((element) => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: element,
-                    markers: false,
-                    start: "-10% 100%",
-                    end: "+=800px 100%",
-                    once: false,
-                    pin: false,
-                    refreshPriority: 1,
-                    scrub: true,
-                },
+    if (!window.matchMedia("(max-width: 1140px)").matches) {
+        document
+            .querySelectorAll(".project-more-left img")
+            ?.forEach((element) => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        markers: false,
+                        start: "-10% 100%",
+                        end: "+=800px 100%",
+                        once: false,
+                        pin: false,
+                        refreshPriority: 1,
+                        scrub: true,
+                    },
+                });
+                tl.fromTo(
+                    element,
+                    { y: "200px", opacity: 0 }, // Ajouter l'opacité initiale
+                    { duration: 4, ease: "expo.out", y: "-6vh", opacity: 1 }, // Ajouter l'opacité finale
+                );
             });
-            tl.fromTo(
-                element,
-                { y: "200px", opacity: 0 }, // Ajouter l'opacité initiale
-                { duration: 4, ease: "expo.out", y: "-6vh", opacity: 1 }, // Ajouter l'opacité finale
-            );
-        });
-}
+    }
 
-if (!window.matchMedia("(max-width: 1140px)").matches) {
-    document
-        .querySelectorAll(".text-right")
-        ?.forEach((element) => {
+    if (!window.matchMedia("(max-width: 1140px)").matches) {
+        document.querySelectorAll(".text-right")?.forEach((element) => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: element,
@@ -75,46 +77,47 @@ if (!window.matchMedia("(max-width: 1140px)").matches) {
             });
             tl.fromTo(
                 element,
-                { y: "100px", opacity: 0 }, 
-                { duration: 0.8, ease: "power1.out", y: "-5vh", opacity: 1 }, 
+                { y: "100px", opacity: 0 },
+                { duration: 0.8, ease: "power1.out", y: "-5vh", opacity: 1 },
             );
         });
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    const bgLoading = document.querySelector(".bg-loading");
-
-let timeline = gsap.timeline();
-
-timeline.fromTo(
-    bgLoading,
-    {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-    },
-    {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        duration: 1.5,
-        delay: 1,
-        ease: "power1.out"
     }
-);
-})
 
+    window.addEventListener("DOMContentLoaded", () => {
+        const bgLoading = document.querySelector(".bg-loading");
+
+        let timeline = gsap.timeline();
+
+        timeline.fromTo(
+            bgLoading,
+            {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            },
+            {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                duration: 1.5,
+                delay: 1,
+                ease: "power1.out",
+            },
+        );
+    });
 </script>
 <Layout title="Silvianna Beauty">
     <Header />
 
     <div class="bg-loading">
-        <h1>En savoir + </h1>
+        <h1>En savoir +</h1>
     </div>
-    
+
     <div class="project-page">
         <div class="header-projects">
             <div class="header-left-project">
                 <div class="bloc-title-width">
                     <h2 class="color-black">Silvianna beauty</h2>
                     <p>
-                        Silvianna Beauty est un salon d'esthetique ouvert dans la commune d'Allinges par Johanna. Forte de ses 12 années d'expérience, elle a ouvert son propre institut
+                        Silvianna Beauty est un salon d'esthetique ouvert dans
+                        la commune d'Allinges par Johanna. Forte de ses 12
+                        années d'expérience, elle a ouvert son propre institut
                     </p>
                 </div>
             </div>
@@ -142,19 +145,16 @@ timeline.fromTo(
                     ux design<br />ui design <br />
                 </p>
             </div>
-    
+
             <div class="text-right">
                 <div class="ct-text-right">
                     <h2>Estheticienne website</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        Création d'un site internet permettant aux utilisateurs
+                        de connaître rapidement les prestations offertes et de
+                        prendre rendez-vous. Optimisation pour les appareils
+                        mobiles et référencement pour une meilleure visibilité
+                        sur internet.
                     </p>
                 </div>
             </div>
@@ -166,16 +166,17 @@ timeline.fromTo(
                 </div>
             </div>
         </div>
-    
+
         <div class="ct little-desc padding-top-big padding-bottom-big">
-            <h2>Mobile-first designed</h2>
+            <h2>Conçu pour les mobiles</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam,
+                J'ai préparé l'interface utilisateur et l'interface utilisateur
+                en tenant compte de la mobilité, car jusqu'à 70 % des gens font
+                désormais leurs achats via un smartphone. Le design est clair et
+                intuitif pour la prise de rendez-vous en ligne.
             </p>
         </div>
-    
+
         <div class="project-more">
             <div class="project-more-left">
                 <img src="/assets/images/silvianna-left.png" />
@@ -184,41 +185,36 @@ timeline.fromTo(
                 <img src="/assets/images/responsive-silvianna.png" />
             </div>
         </div>
-    
+
         <div class="ct little-desc padding-bottom-big">
             <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
+                Interface utilisateur conçue pour simplifier et personnaliser l'expérience de navigation pour les préstations lié a l'ésthétique.
             </h2>
         </div>
-    
+
         <div class="ct project-image padding-bottom-big">
             <a href="https://silvianna-beauty.fr/" target="blank">
                 <img src="/assets/images/silvianna-web-beauty.png" />
             </a>
         </div>
-    
+
         <div class="ct little-desc padding-bottom-big">
-            <h2>Le resultat</h2>
+            <h2>Le résultat</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam,
+                Un design clair et minimaliste avec des couleurs sobres et agréables. J'ai utilisé des blocs carrés pour montrer la simplicité, avec quelques touches de couleurs chaudes pour rendre l'ensemble plus attrayant. La réservation en ligne est intégrée via Kalendes. J'ai également effectué des tests pour optimiser le référencement du site dans un marché très concurrentiel.
             </p>
         </div>
-    
+
         <div class="ct maquette">
             <img src="/assets/images/maquette-silvianna.png" />
         </div>
     </div>
-    
+
     <div class="ct">
-    
-        <Footer/>
+        <Footer />
     </div>
-    
+
     <div class="ctLarge">
-        <Crosslink/>
+        <Crosslink />
     </div>
-    
 </Layout>

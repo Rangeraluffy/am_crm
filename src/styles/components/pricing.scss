@@ -7,8 +7,12 @@
     column-gap: 5px;
 
     @include for-size(tablet) {
-        flex-direction: column;
         row-gap: 25px;
+        column-gap: 55px;
+      }
+
+    @include for-size(phone) {
+        flex-direction: column;
       }
 
     .card-offer{
@@ -19,7 +23,7 @@
         transition: transform 0.3s ease;
 
 
-        @include for-size(tablet) {
+        @include for-size(phone) {
             width: 100%;
           }
 
@@ -53,12 +57,20 @@
                 width: 38%;
                 margin: auto;
                 padding-bottom: 20px;
+
+                @include for-size(phone) {
+                    width: 25%;
+                  }
             }
 
             .card-price{
                 text-align: center;
                 font-size: 60px;
                 font-family: $recoletaSemiBold;
+
+                @include for-size(phone) {
+                    font-size: 40px;
+                  }
             }
 
             .card-title{

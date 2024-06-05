@@ -14,41 +14,27 @@ const each = element.querySelectorAll('.project');
 
 
 
-const tl = gsap.timeline({
+if (window.innerWidth >= 768) {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: element,
+            markers: false,
+            start: 'top +=70%',
+            end: 'center +=70%',
+            once: true,
+            pin: false,
+            refreshPriority: 1,
+        }
+    });
 
-    scrollTrigger: {
-
-        trigger: element,
-
-        markers: false,
-
-        start: 'top +=70%',
-
-        end: 'center +=70%',
-
-        once: true,
-
-        pin: false,
-
-        refreshPriority: 1,
-
-    }
-
-});
-
-tl.from(each, {
-
-    autoAlpha: 0,
-
-    y: 70,
-
-    ease: 'power1.out',
-
-    duration: 1,
-
-    stagger: 0.1
-    
-});
+    tl.from(each, {
+        autoAlpha: 0,
+        y: 70,
+        ease: 'power1.out',
+        duration: 1,
+        stagger: 0.1
+    });
+}
 
 });</script>
 

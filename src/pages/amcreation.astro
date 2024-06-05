@@ -45,7 +45,31 @@ import "@styles/main.scss";
                     scrollTrigger: {
                         trigger: element,
                         markers: false,
-                        start: "-10% 100%",
+                        start: "-00% 100%",
+                        end: "+=8000px 100%",
+                        once: false,
+                        pin: false,
+                        refreshPriority: 1,
+                        scrub: true,
+                    },
+                });
+                tl.fromTo(
+                    element,
+                    { x: "-200px",  }, 
+                    { duration: 1, ease: "expo.out", x: "10vh", }, 
+                );
+            });
+    }
+
+    if (!window.matchMedia("(max-width: 1140px)").matches) {
+        document
+            .querySelectorAll(".project-more-right img")
+            ?.forEach((element) => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        markers: false,
+                        start: "-00% 100%",
                         end: "+=800px 100%",
                         once: false,
                         pin: false,
@@ -55,8 +79,8 @@ import "@styles/main.scss";
                 });
                 tl.fromTo(
                     element,
-                    { y: "200px", opacity: 0 }, // Ajouter l'opacité initiale
-                    { duration: 4, ease: "expo.out", y: "-6vh", opacity: 1 }, // Ajouter l'opacité finale
+                    { y: "-200px",opacity:0,  }, 
+                    { duration: 1, ease: "expo.out", y: "10vh", opacity:1, }, 
                 );
             });
     }
@@ -113,16 +137,18 @@ import "@styles/main.scss";
         <div class="header-projects">
             <div class="header-left-project">
                 <div class="bloc-title-width">
-                    <h2 class="color-black">AM Creations</h2>
+                    <h2 class="color-black">AM Créations</h2>
                     <p>
-                        Silvianna Beauty est un salon d'esthetique ouvert dans
-                        la commune d'Allinges par Johanna. Forte de ses 12
-                        années d'expérience, elle a ouvert son propre institut
+                        AM Créations est une agence spécialisée dans le design
+                        et la création de sites internet. AM Créations est née
+                        au cœur d'Annecy, à proximité de Genève, pour
+                        accompagner les PME, TPE, clubs et associations en quête
+                        de visibilité.
                     </p>
                 </div>
             </div>
             <div class="header-right-project">
-                <img src="/assets/images/logo-anim-am.svg" />
+                <img src="/assets/images/mockup-logo.jpg" />
             </div>
         </div>
         <div class="about-project">
@@ -150,15 +176,11 @@ import "@styles/main.scss";
                 <div class="ct-text-right">
                     <h2>Creation de site internet</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        AM Création a été conçu pour mettre en avant un site
+                        internet au design soigné, avec des animations et une
+                        mise en page simple offrant une immersion au défilement.
+                        La navigation est intuitive, sans négliger la
+                        compatibilité mobile du site.
                     </p>
                 </div>
             </div>
@@ -182,10 +204,10 @@ import "@styles/main.scss";
 
         <div class="project-more">
             <div class="project-more-left">
-                <img src="/assets/images/silvianna-left.png" />
+                <img src="/assets/images/mockup-am-creations.png" />
             </div>
             <div class="project-more-right">
-                <img src="/assets/images/responsive-silvianna.png" />
+                <img src="/assets/images/presentation-page-projet.png" />
             </div>
         </div>
 
@@ -194,12 +216,6 @@ import "@styles/main.scss";
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt
             </h2>
-        </div>
-
-        <div class="ct project-image padding-bottom-big">
-            <a href="https://silvianna-beauty.fr/" target="blank">
-                <img src="/assets/images/silvianna-web-beauty.png" />
-            </a>
         </div>
 
         <div class="ct little-desc padding-bottom-big">

@@ -199,6 +199,10 @@
     overflow: hidden;
     background-color: $c-white;
 
+    @include for-size(tablet) {
+       height: 100%;
+     }
+
     .conteneurBlocImgTxt {
         column-gap: 0px;
         height: 100%;
