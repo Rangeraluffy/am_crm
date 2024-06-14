@@ -26,6 +26,10 @@ header{
     position: fixed;
     flex-direction: row-reverse;
 
+    @include for-size(tablet) {
+      position: relative;
+    }
+
     nav {
         color: #fff;
         display: flex;
@@ -61,6 +65,10 @@ header{
           &:nth-child(2) {
             transform: translate3d(-50%, 0, 0);
           }
+          &:hover{
+            background: $secondary-color;
+          }
+        
         }
       
         &.active {
@@ -78,6 +86,10 @@ header{
       
             &:nth-child(2) {
               transform: translate3d(-50%, 50%, 0) rotate(-45deg);
+            }
+
+            &:hover{
+              background: $secondary-color;
             }
           }
         }
@@ -114,6 +126,10 @@ header{
           top: -80vh;
           left: 0;
 
+          // @include for-size(phone) {
+          //   height: 100vh;
+          // }
+
           .adresse-mail-header{
             font-family: $raleway;
             font-size: 42px;
@@ -137,6 +153,10 @@ header{
           top: -80vh;
           right: 0;
           pointer-events: fill;
+
+          // @include for-size(phone) {
+          //   height: 100vh;
+          // }
       
           .menu-column {
             flex-direction: column;
@@ -149,7 +169,22 @@ header{
           text-decoration: none;
           color: black;
           opacity: 0;
-          line-height: 1.8;
+padding: 10px 0px;
+          position: relative;
+
+          &:after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background:  $secondary-color;
+            transition: width .5s;
+        }
+
+        &:hover::after {
+            width: 100%;
+            //transition: width .3s;
+          }
 
           &:hover{
             color: $secondary-color;

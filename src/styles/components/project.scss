@@ -6,6 +6,10 @@
     column-gap: 150px;
 
     @include for-size(tablet) {
+        column-gap: 50px;
+    }
+
+    @include for-size(phone) {
         grid-template-columns: repeat(1, 1fr);
         column-gap: 50px;
     }

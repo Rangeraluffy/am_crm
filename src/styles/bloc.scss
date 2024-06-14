@@ -167,7 +167,7 @@ HORIZONTAL SCROLL
     width: 50%;
 
     @include for-size(tablet) {
-      width: 100%;
+      width: 50%;
     }
   }
 
@@ -195,6 +195,10 @@ HORIZONTAL SCROLL
   align-items: center;
   height: 100vh;
   background: #faf8f5;
+
+  @include for-size(tablet) {
+    height: 50vh;
+   }
 
   h2,
   h3 {
@@ -269,7 +273,14 @@ SCROLL RIGHT GSAP
 
       @include for-size(tablet) {
         height: auto;
-        padding: 0px 30px;
+       }
+
+       .pin-img-responsive{
+        display: none;
+
+        @include for-size(tablet) {
+          display: block;
+         }
        }
 
       .content {
@@ -283,6 +294,7 @@ SCROLL RIGHT GSAP
 
         @include for-size(tablet) {
          width: 100%;
+         padding: 30px;
         }
 
         img{
@@ -300,7 +312,7 @@ SCROLL RIGHT GSAP
     position: relative;
 
     @include for-size(tablet) {
-      width: 100%;
+      display: none;
      }
 
     .pin-spacer {
