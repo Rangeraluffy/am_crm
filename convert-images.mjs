@@ -24,7 +24,7 @@ const convertImages = async () => {
       await fs.writeFile(webpFile, webpData);
 
       // Optionnel : Supprimer le fichier PNG ou JPG d'origine
-      // await fs.unlink(file);
+       await fs.unlink(file);
 
       console.log(`Converted ${file} to ${webpFile}`);
     } catch (err) {
