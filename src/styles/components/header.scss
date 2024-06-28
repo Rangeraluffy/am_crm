@@ -255,9 +255,13 @@ padding: 10px 0px;
       width: 100%;
     }
 
-    svg{
-      width: 60%;
+    .logo-hero-am{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      margin: auto;
     }
+
   }
  
 }
