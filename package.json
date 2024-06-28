@@ -7,16 +7,21 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "convert-images": "node convert-images.js"
   },
   "dependencies": {
+    "@astrojs/vercel": "^7.7.1",
     "@fontsource/comfortaa": "^5.0.18",
     "@fontsource/geologica": "^5.0.3",
     "astro": "^4.4.4",
     "astro-svg-loaders": "^4.0.0",
     "dom-utils": "^0.9.0",
     "domutils": "^3.1.0",
-    "gsap": "^3.12.5"
+    "fs-extra": "^11.2.0",
+    "glob": "^10.4.2",
+    "gsap": "^3.12.5",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
